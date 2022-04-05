@@ -1,0 +1,9 @@
+version: "3.7"
+
+services:
+  test-image:
+    build: .
+    container_name: test-container
+    command: sh -c "npm install && npm run start:dev"
+    volumes:
+      - ./:/app
